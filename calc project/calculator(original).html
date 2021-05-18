@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="calculator stylesheet.css">
+        <title>
+        </title>
+    </head>
+        <body>
+
+            <div id="fistd">
+
+          <p id="fpifd"></p> </div>
+        <div id="innerdiv">  <p id="spifd"></p>   
+          <input id="tpifd" class="textview">  
+            
+      <div id="scdd">
+          
+     
+        <button class="btnc" id="fbisd">1</button>
+        <button class="btnc" id="sfisd">2</button>
+        <button class="btnc" id="tbisd">3</button>
+        <button class="btnc" id="f4bisd">4</button>
+        <button class="btnc" id="f5bisd">5</button>
+        <button class="btnc" id="s6bisd">6</button>
+        <button class="btnc" id="s7bisd">7</button>
+        <button class="btnc" id="e8bisd">8</button>
+        <button class="btnc" id="n9bisd">9</button>
+        <button class="btnc" id="z0bisd">0</button>
+    
+      </div>
+
+      
+
+        <div id="thdd">
+
+        </div>
+
+        <div id="operators">
+            <button id="fsifd" class="btnc" >+</button>
+            <button id="ssifd" class="btnc">-</button>
+            <button id="tsifd" class="btnc">*</button>
+            <button id="f4sifd" class="btnc">/</button>
+            <button id="f5sifd" class="btnc">=</button>
+            <button id="s6sifd" class="btnclear">C</button>
+        </div>
+    </div>
+        </body>
+
+        <script>
+            var btns = document.getElementsByTagName("button");
+            var calc = document.getElementById("tpifd");
+
+            for (var thisBtn of btns) {
+                thisBtn.addEventListener('click', function() {
+                    if (this.innerHTML == "=")
+                        calc.value = eval(calc.value);
+                    else if (this.innerHTML == "C")
+                        calc.value = "";
+                    else
+                        calc.value += this.innerHTML;
+                })
+            }
+        </script>
+
+       
+    
+</html>
